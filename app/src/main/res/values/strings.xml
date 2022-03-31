@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hitung Kurs</string>
+    <string name="kursintro">Hitung Kurs merupakan aplikasi kalkulator nilai mata uang asing Dollar Amerika (USD) ke Mata uang Indonesia Rupiah (IDR).</string>
+    <string name="nilaiidr">Nilai Uang Dollar USD</string>
+    <string name="hitung">Hitung</string>
+    <string name="hargakurs">Kurs Dollar saat ini 14.300 Rupiah</string>
+    <string name="nilaikurs_invalid">Nilai kurs kosong!</string>
+</resources>
