@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import org.d3if2095.hitungkurs.R
 import org.d3if2095.hitungkurs.databinding.FragmentHitungBinding
 
@@ -21,6 +22,12 @@ class HitungFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.button.setOnClickListener { hitungKurs() }
+        binding.infoButton.setOnClickListener {
+            it.findNavController().navigate(
+                R.id.action_hitungFragment_to_infoFragment
+            )
+        }
+
     }
 
     private fun hitungKurs() {
@@ -31,5 +38,6 @@ class HitungFragment : Fragment() {
         }
         val kurs = jumlah.toFloat() * 14300;
         binding.textView4.setText("Hasil Nilai Kurs  : Rp." + kurs);
+        binding.infoButton.visibility = View.VISIBLE
     }
 }
