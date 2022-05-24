@@ -1,5 +1,6 @@
 package org.d3if2095.hitungkurs.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -27,7 +28,18 @@ class HitungFragment : Fragment() {
                 R.id.action_hitungFragment_to_infoFragment
             )
         }
+        binding.shareButton.setOnClickListener { shareData() }
 
+    }
+
+    private fun shareData() {
+        val message = getString(R.string.bagikan_template,binding.editTextNumber.text)
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -51,6 +63,6 @@ class HitungFragment : Fragment() {
         }
         val kurs = jumlah.toFloat() * 14300;
         binding.textView4.setText("Hasil Nilai Kurs  : Rp." + kurs);
-        binding.infoButton.visibility = View.VISIBLE
+        binding.buttonGroup.visibility = View.VISIBLE
     }
 }

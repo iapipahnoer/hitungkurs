@@ -9,4 +9,6 @@
     <string name="lihat_info">Lihat Info Kurs</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="deskripsi">Hitung Kurs merupakan aplikasi kalkulator nilai mata uang asing Dollar Amerika (USD) ke Mata uang Indonesia Rupiah (IDR).\n\nCopyright © 2022 <b>Iqbal Apipah Noer</b>.\nAll rights reserved.</string>
+    <string name="share">Share</string>
+    <string name="bagikan_template">Jumlah Kurs: %1$s</string>
 </resources>
