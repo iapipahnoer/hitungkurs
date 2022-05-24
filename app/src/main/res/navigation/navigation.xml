@@ -13,9 +13,17 @@
         <action
             android:id="@+id/action_hitungFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
         android:name="org.d3if2095.hitungkurs.ui.InfoFragment"
         android:label="InfoFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if2095.hitungkurs.ui.AboutFragment"
+        android:label="@string/tentang_aplikasi"
+        tools:layout="@layout/fragment_about"/>
 </navigation>

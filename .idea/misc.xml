@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MBN0C/AndroidStudioProjects/HitungKurs/app/src/main/res/drawable/info.xml" value="0.1945" />
         <entry key="..\:/Users/MBN0C/AndroidStudioProjects/HitungKurs/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/MBN0C/AndroidStudioProjects/HitungKurs/app/src/main/res/layout/fragment_about.xml" value="0.16417272338606242" />
         <entry key="..\:/Users/MBN0C/AndroidStudioProjects/HitungKurs/app/src/main/res/layout/fragment_hitung.xml" value="0.1" />
         <entry key="..\:/Users/MBN0C/AndroidStudioProjects/HitungKurs/app/src/main/res/layout/fragment_infokurs.xml" value="0.33" />
+        <entry key="..\:/Users/MBN0C/AndroidStudioProjects/HitungKurs/app/src/main/res/menu/options_menu.xml" value="0.16417272338606242" />
       </map>
     </option>
   </component>
