@@ -5,4 +5,5 @@
     <string name="hitung">Hitung</string>
     <string name="hargakurs">Kurs Dollar saat ini 14.300 Rupiah</string>
     <string name="nilaikurs_invalid">Nilai kurs kosong!</string>
+    <string name="infokurs">Info Kurs USD Dollar saat ini adalah 14.300</string>
 </resources>
