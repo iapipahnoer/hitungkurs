@@ -15,4 +15,5 @@
     <string name="channel_desc">Update data kurs</string>
     <string name="notif_title">Info Update kurs!</string>
     <string name="notif_text">Cek kurs terkini...</string>
+    <string name="koneksi_error">Koneksi error</string>
 </resources>

@@ -10,3 +10,4 @@
     app:navGraph="@navigation/navigation"
     tools:context=".MainActivity"
     tools:viewBindingIgnore="true" />
+
