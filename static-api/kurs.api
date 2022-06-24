@@ -1,0 +1,4 @@
+[
+    {"kurs": "USD", "namaNegara": "Amerika Serikat", "imageId": "amerika"},
+    {"kurs": "IDR", "namaNegara": "Indonesia", "imageId": "indonesia"}
+]
