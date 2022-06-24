@@ -8,6 +8,6 @@ data class KursEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L,
     var tanggal: Long = System.currentTimeMillis(),
-    var jumlah: Float,
+    var jumlah: String,
     var kurs: Float
 )

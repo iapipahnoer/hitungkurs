@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import org.d3if2095.hitungkurs.R
 import org.d3if2095.hitungkurs.databinding.FragmentInfokursBinding
 
@@ -16,7 +17,13 @@ class InfoFragment : Fragment() {
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.imageView.setImageResource(R.drawable.info)
+        val imgUrl = "https://raw.githubusercontent.com/iqbalapipahnoer/hitungkurs/master/static-api/infokurs.png"
+        getActivity()?.let {
+            Glide.with(it)
+                .load(imgUrl)
+                .error(R.drawable.ic_baseline_broken_image_24)
+                .into(binding.imageView)
+        }
         binding.textView.text = getString(R.string.infokurs)
     }
 }

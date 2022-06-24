@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:contentDescription="@null"
-        tools:src="@drawable/info" />
+        tools:src="@drawable/ic_baseline_broken_image_24" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
