@@ -1,5 +1,6 @@
 package org.d3if2095.hitungkurs.ui
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,8 +9,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import org.d3if2095.hitungkurs.MainActivity
 import org.d3if2095.hitungkurs.R
 import org.d3if2095.hitungkurs.databinding.FragmentHitungBinding
+import org.d3if2095.hitungkurs.network.UpdateWorker
+import java.util.concurrent.TimeUnit
 
 class HitungFragment : Fragment() {
 
@@ -30,6 +37,8 @@ class HitungFragment : Fragment() {
         }
         binding.shareButton.setOnClickListener { shareData() }
 
+        scheduleUpdater(requireActivity().application)
+
     }
 
     private fun shareData() {
@@ -40,6 +49,17 @@ class HitungFragment : Fragment() {
                 requireActivity().packageManager) != null) {
             startActivity(shareIntent)
         }
+    }
+
+    fun scheduleUpdater(app: Application) {
+        val request = OneTimeWorkRequestBuilder<UpdateWorker>()
+            .setInitialDelay(1, TimeUnit.MINUTES)
+            .build()
+        WorkManager.getInstance(app).enqueueUniqueWork(
+            MainActivity.CHANNEL_ID,
+            ExistingWorkPolicy.REPLACE,
+            request
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
